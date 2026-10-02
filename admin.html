@@ -17,11 +17,40 @@
       <p class="eyebrow">لوحة الإدارة</p>
       <h1>ذادريـم</h1>
       <p class="muted">الدخول مخصص لحساب الإدارة المصرّح له.</p>
+
       <form id="login-form" class="form-grid">
-        <label>البريد الإلكتروني<input id="email" type="email" autocomplete="username" required></label>
-        <label>كلمة المرور<input id="password" type="password" autocomplete="current-password" required></label>
+        <label>البريد الإلكتروني
+          <input id="email" type="email" autocomplete="username" required>
+        </label>
+
+        <label>كلمة المرور
+          <input id="password" type="password" autocomplete="current-password" required>
+        </label>
+
         <button class="primary" type="submit">دخول</button>
+        <button id="forgot-password" class="ghost" type="button">نسيت كلمة المرور؟</button>
         <p id="auth-error" class="error" role="alert"></p>
+        <p id="auth-message" class="muted" role="status"></p>
+      </form>
+    </section>
+
+    <section id="reset-card" class="glass admin-card hidden">
+      <p class="eyebrow">إعادة تعيين كلمة المرور</p>
+      <h1>كلمة مرور جديدة</h1>
+      <p class="muted">اكتب كلمة المرور الجديدة مرتين ثم اضغط حفظ.</p>
+
+      <form id="reset-form" class="form-grid">
+        <label>كلمة المرور الجديدة
+          <input id="new-password" type="password" minlength="6" autocomplete="new-password" required>
+        </label>
+
+        <label>تأكيد كلمة المرور
+          <input id="new-password-confirm" type="password" minlength="6" autocomplete="new-password" required>
+        </label>
+
+        <button class="primary" type="submit">حفظ كلمة المرور</button>
+        <p id="reset-error" class="error" role="alert"></p>
+        <p id="reset-message" class="muted" role="status"></p>
       </form>
     </section>
 
@@ -36,9 +65,15 @@
 
       <form id="link-form" class="form-grid">
         <input id="edit-id" type="hidden">
-        <label>اسم الرابط<input id="link-title" maxlength="80" required placeholder="مثال: تلجرام"></label>
-        <label>الرابط<input id="link-url" type="url" maxlength="500" required placeholder="https://t.me/..."></label>
-        <label>الأيقونة / الرمز <input id="link-icon" maxlength="8" placeholder="↗"></label>
+        <label>اسم الرابط
+          <input id="link-title" maxlength="80" required placeholder="مثال: تلجرام">
+        </label>
+        <label>الرابط
+          <input id="link-url" type="url" maxlength="500" required placeholder="https://t.me/...">
+        </label>
+        <label>الأيقونة / الرمز
+          <input id="link-icon" maxlength="8" placeholder="↗">
+        </label>
         <div class="form-actions">
           <button class="primary" type="submit">حفظ الرابط</button>
           <button id="cancel-edit" class="ghost" type="button">إلغاء</button>
