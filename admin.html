@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#090b18">
+  <title>إدارة — ذادريـم</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="admin-body">
+  <canvas id="scene" aria-hidden="true"></canvas>
+  <div class="aurora aurora-a"></div>
+  <div class="aurora aurora-b"></div>
+
+  <main class="admin-shell">
+    <section id="auth-card" class="glass admin-card">
+      <p class="eyebrow">لوحة الإدارة</p>
+      <h1>ذادريـم</h1>
+      <p class="muted">الدخول مخصص لحساب الإدارة المصرّح له.</p>
+      <form id="login-form" class="form-grid">
+        <label>البريد الإلكتروني<input id="email" type="email" autocomplete="username" required></label>
+        <label>كلمة المرور<input id="password" type="password" autocomplete="current-password" required></label>
+        <button class="primary" type="submit">دخول</button>
+        <p id="auth-error" class="error" role="alert"></p>
+      </form>
+    </section>
+
+    <section id="dashboard" class="glass admin-card hidden">
+      <div class="dashboard-head">
+        <div>
+          <p class="eyebrow">إدارة الروابط</p>
+          <h1>ذادريـم</h1>
+        </div>
+        <button id="logout" class="ghost">تسجيل الخروج</button>
+      </div>
+
+      <form id="link-form" class="form-grid">
+        <input id="edit-id" type="hidden">
+        <label>اسم الرابط<input id="link-title" maxlength="80" required placeholder="مثال: تلجرام"></label>
+        <label>الرابط<input id="link-url" type="url" maxlength="500" required placeholder="https://t.me/..."></label>
+        <label>الأيقونة / الرمز <input id="link-icon" maxlength="8" placeholder="↗"></label>
+        <div class="form-actions">
+          <button class="primary" type="submit">حفظ الرابط</button>
+          <button id="cancel-edit" class="ghost" type="button">إلغاء</button>
+        </div>
+        <p id="save-error" class="error" role="alert"></p>
+      </form>
+
+      <div id="admin-links" class="admin-links"></div>
+    </section>
+  </main>
+
+  <script type="module" src="admin.js"></script>
+</body>
+</html>
