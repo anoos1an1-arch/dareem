@@ -1,4 +1,4 @@
 // ضع بيانات مشروع Supabase هنا.
 // المفتاح المطلوب هو anon/publishable key فقط، وليس service_role.
-export const SUPABASE_URL = "https://YOUR_PROJECT.supabase.co";
-export const SUPABASE_ANON_KEY = "YOUR_SUPABASE_ANON_KEY";
+export const SUPABASE_URL = "https://hgyjnysvsrmxaggfjvbo.supabase.co";
+export const SUPABASE_ANON_KEY = "sb_publishable_l4iQyucWBvN9iRyIkzExPQ_6BNlxdAj";
